@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F11B4A50-0BD7-42D7-8ECF-22BE4AF6D5DA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OtobüsOtomasyonProjesi</RootNamespace>
+    <AssemblyName>OtobüsOtomasyonProjesi</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\AracTakip.cs" />
+    <Compile Include="Entities\Otobus.cs" />
+    <Compile Include="Entities\BiletAl.cs" />
+    <Compile Include="Entities\Sehir.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="AnaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaForm.Designer.cs">
+      <DependentUpon>AnaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAracTakip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAracTakip.Designer.cs">
+      <DependentUpon>FormAracTakip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBiletKes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBiletKes.Designer.cs">
+      <DependentUpon>FormBiletKes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKisiBilgisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKisiBilgisi.Designer.cs">
+      <DependentUpon>FormKisiBilgisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKontrol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKontrol.Designer.cs">
+      <DependentUpon>FormKontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKullaniciPaneli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKullaniciPaneli.Designer.cs">
+      <DependentUpon>FormKullaniciPaneli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOtobus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOtobus.Designer.cs">
+      <DependentUpon>FormOtobus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSehir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSehir.Designer.cs">
+      <DependentUpon>FormSehir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902111641104_InitialCreate.cs" />
+    <Compile Include="Migrations\201902111641104_InitialCreate.Designer.cs">
+      <DependentUpon>201902111641104_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902121036376_BiletUcretiEklendi.cs" />
+    <Compile Include="Migrations\201902121036376_BiletUcretiEklendi.Designer.cs">
+      <DependentUpon>201902121036376_BiletUcretiEklendi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902121044469_BiletUcretiTypeUpdate.cs" />
+    <Compile Include="Migrations\201902121044469_BiletUcretiTypeUpdate.Designer.cs">
+      <DependentUpon>201902121044469_BiletUcretiTypeUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902121328117_AracTakip.cs" />
+    <Compile Include="Migrations\201902121328117_AracTakip.Designer.cs">
+      <DependentUpon>201902121328117_AracTakip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902121536307_TarihFieldChange.cs" />
+    <Compile Include="Migrations\201902121536307_TarihFieldChange.Designer.cs">
+      <DependentUpon>201902121536307_TarihFieldChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="OtobusContext.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AnaForm.resx">
+      <DependentUpon>AnaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAracTakip.resx">
+      <DependentUpon>FormAracTakip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBiletKes.resx">
+      <DependentUpon>FormBiletKes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKisiBilgisi.resx">
+      <DependentUpon>FormKisiBilgisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKontrol.resx">
+      <DependentUpon>FormKontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKullaniciPaneli.resx">
+      <DependentUpon>FormKullaniciPaneli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOtobus.resx">
+      <DependentUpon>FormOtobus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSehir.resx">
+      <DependentUpon>FormSehir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902111641104_InitialCreate.resx">
+      <DependentUpon>201902111641104_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902121036376_BiletUcretiEklendi.resx">
+      <DependentUpon>201902121036376_BiletUcretiEklendi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902121044469_BiletUcretiTypeUpdate.resx">
+      <DependentUpon>201902121044469_BiletUcretiTypeUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902121328117_AracTakip.resx">
+      <DependentUpon>201902121328117_AracTakip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902121536307_TarihFieldChange.resx">
+      <DependentUpon>201902121536307_TarihFieldChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
